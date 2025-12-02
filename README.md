@@ -153,8 +153,6 @@ Ini membuat **deteksi warna lebih stabil** saat kondisi pencahayaan berubah.
 - Sistem operasi: Windows / Linux / macOS
 
 ### 1. Clone / Download Repo
-
-```bash
 # Contoh (HTTPS)
 git clone https://github.com/Ojannjay/Tugas-1-dan-Tugas-2-Pengolahan-Citra-Video-Ojan.git
 
