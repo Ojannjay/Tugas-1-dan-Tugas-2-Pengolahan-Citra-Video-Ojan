@@ -1,0 +1,8 @@
+opencv-python
+numpy
+
+Kalau bisa versi yang:
+opencv-python==4.10.0.84
+numpy==2.1.3
+
+Biar bisa bekerja secara optimal wkwk
