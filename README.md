@@ -342,28 +342,33 @@ Kalau mau nambah problem lain (warna tidak terdeteksi, frame lag, dll) tinggal l
 - Gunakan objek dengan warna lebih pekat.
 - Sesuaikan kembali rentang HSV di kode.
 
-### 📁 Struktur Project
+## 📁 Struktur Project
+``` text
 Tugas-1-dan-Tugas-2-Pengolahan-Citra-Video-Ojan/
-├── tugas1_blur.py          # Implementasi Tugas 1 (smoothing, blurring, sharpen)
-├── tugas2_HSV.py           # Implementasi Tugas 2 (deteksi warna HSV + mask)
-├── requirements.txt        # Daftar dependencies Python
-└── README.md               # Dokumentasi project (file ini)
+├── tugas1_blur.py     # Implementasi Tugas 1 (smoothing, blurring, sharpen)
+├── tugas2_HSV.py      # Implementasi Tugas 2 (deteksi warna HSV + mask)
+├── requirements.txt   # Daftar dependencies Python
+└── README.md          # Dokumentasi project (file ini)
 
-### 🧾 Catatan untuk Dosen
-**Tugas 1:**
+```
+🧾 Catatan untuk Dosen
+
+Tugas 1
+
 ✅ Implementasi Average Blur dengan 2 ukuran kernel (5×5 dan 9×9)
-✅ Implementasi Gaussian Blur
-✅ Implementasi Sharpening filter
+✅ Implementasi Gaussian Blur (custom kernel + cv2.filter2D)
+✅ Implementasi Sharpening filter (high-pass)
 ✅ Switching filter secara real-time via keyboard
-✅ Visual overlay mode filter di layar webcam
+✅ Visual overlay nama mode filter di layar webcam
 
-**Tugas 2:**
+Tugas 2
+
 ✅ Konversi BGR → HSV
 ✅ Thresholding warna untuk 4 warna (merah, hijau, biru, kuning)
 ✅ Operasi morfologi (Opening & Closing) untuk membersihkan mask
-✅ Deteksi kontur, bounding box, label area objek
-✅ Mode khusus visualisasi channel HSV
-✅ Fitur tambahan: ukuran jendela mask dapat diubah dengan [ dan ]
+✅ Deteksi kontur, bounding box, dan label area objek
+✅ Mode visualisasi HSV / mask untuk pembelajaran
+✅ Fitur tambahan: ukuran jendela mask dapat diubah dengan tombol [ dan ]
 
 ### 👨‍💻 Informasi Pengembang
 Nama : Nur Rahman Fauzan (Ojan)
