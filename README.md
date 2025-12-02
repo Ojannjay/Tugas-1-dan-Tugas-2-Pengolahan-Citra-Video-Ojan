@@ -162,7 +162,7 @@ cd Tugas-1-dan-Tugas-2-Pengolahan-Citra-Video-Ojan
 
 Menggunakan `requirements.txt`:
 
-```bash
+
 pip install -r requirements.txt
 
 Atau install manual (kalau mau simple):
@@ -177,14 +177,12 @@ Kalau tidak error dan versi muncul, berarti siap dipakai. ✅
 
 Lanjut lagi di bawahnya (buat header baru):
 
-```markdown
 ## 🎮 Cara Menjalankan Program
 
 > Jalankan semua perintah dari folder repo setelah proses clone & install selesai.
 
 ### Menjalankan Tugas 1 – Smoothing, Blurring & Sharpening
 
-```bash
 python tugas1_blur.py
 
 Tips penggunaan:
@@ -195,7 +193,6 @@ Tips penggunaan:
 
 #### Menjalankan Tugas 2 (Deteksi Warna HSV) 🌈
 
-```bash
 python tugas2_HSV.py
 
 Kontrol Keyboard Utama:
@@ -332,14 +329,12 @@ Di tugas ini, kontur dipakai untuk:
 - Pastikan tidak ada aplikasi lain yang memakai kamera (Zoom, Meet, OBS, dll).
 - Coba ganti index kamera:
 
-```python
 cap = cv2.VideoCapture(0)  # coba ganti 1, 2, dst
 
 Cek di pengaturan Windows apakah aplikasi Python diizinkan akses kamera.
 
 Kalau mau nambah problem lain (warna tidak terdeteksi, frame lag, dll) tinggal lanjut di bawahnya dengan pola yang sama:
 
-```md
 **Problem: Warna tidak terdeteksi**
 
 **Solusi:**
