@@ -12,30 +12,31 @@ Dibuat dengan fokus ke:
 
 ---
 
-# 📚 Daftar Isi
+## 📚 Daftar Isi
 
-1. [Deskripsi Singkat](#-deskripsi-singkat)
-2. [Tugas 1 – Smoothing, Blurring & Sharpening](#-tugas-1--smoothing-blurring--sharpening)  
-   - [Fitur Utama Tugas 1](#fitur-utama-tugas-1)  
+1. [Deskripsi Singkat](#deskripsi-singkat)
+2. [Tugas 1 – Smoothing, Blurring & Sharpening](#tugas-1--smoothing-blurring--sharpening)
+   - [Fitur Utama Tugas 1](#fitur-utama-tugas-1)
    - [Kontrol Keyboard Tugas 1](#kontrol-keyboard-tugas-1)
-3. [Tugas 2 – Deteksi Warna HSV](#-tugas-2--deteksi-warna-hsv)  
-   - [Kenapa HSV?](#kenapa-hsv)  
-   - [Fitur Utama Tugas 2](#fitur-utama-tugas-2)  
+3. [Tugas 2 – Deteksi Warna HSV](#tugas-2--deteksi-warna-hsv)
+   - [Kenapa HSV?](#kenapa-hsv)
+   - [Fitur Utama Tugas 2](#fitur-utama-tugas-2)
    - [Kontrol Keyboard Tugas 2](#kontrol-keyboard-tugas-2)
-4. [Instalasi & Persiapan](#-instalasi--persiapan)
-5. [Cara Menjalankan Program](#-cara-menjalankan-program)
-6. [Konsep Teoretis Singkat](#-konsep-teoretis-singkat)  
-   - [Konvolusi & Kernel dalam Image Processing](#1-konvolusi--kernel-dalam-image-processing)  
-   - [Average Blur (Mean Filter)](#2-average-blur-mean-filter)  
-   - [Gaussian Blur](#3-gaussian-blur)  
-   - [Sharpening (High-Pass Filter)](#4-sharpening-high-pass-filter)  
-   - [Ruang Warna BGR vs HSV](#5-ruang-warna-bgr-vs-hsv)  
-   - [Operasi Morfologi](#6-operasi-morfologi)  
-   - [Kontur](#7-kontur)
-7. [Troubleshooting](#-troubleshooting)
-8. [Struktur Project](#-struktur-project)
-9. [Catatan untuk Dosen](#-catatan-untuk-dosen)
-10. [Informasi Pengembang](#-informasi-pengembang)
+4. [Instalasi & Persiapan](#instalasi--persiapan)
+5. [Cara Menjalankan Program](#cara-menjalankan-program)
+6. [Konsep Teoretis Singkat](#konsep-teoretis-singkat)
+   - [Konvolusi & Kernel dalam Image Processing](#konvolusi--kernel-dalam-image-processing)
+   - [Average Blur (Mean Filter)](#average-blur-mean-filter)
+   - [Gaussian Blur](#gaussian-blur)
+   - [Sharpening (High-Pass Filter)](#sharpening-high-pass-filter)
+   - [Ruang Warna BGR vs HSV](#ruang-warna-bgr-vs-hsv)
+   - [Operasi Morfologi](#operasi-morfologi)
+   - [Kontur](#kontur)
+7. [Troubleshooting](#troubleshooting)
+8. [Struktur Project](#struktur-project)
+9. [Catatan untuk Dosen](#catatan-untuk-dosen)
+10. [Informasi Pengembang](#informasi-pengembang)
+
 
 ---
 
@@ -154,28 +155,30 @@ Ini membuat **deteksi warna lebih stabil** saat kondisi pencahayaan berubah.
 
 ### 1. Clone / Download Repo
 # Contoh (HTTPS)
+```bash
 git clone https://github.com/Ojannjay/Tugas-1-dan-Tugas-2-Pengolahan-Citra-Video-Ojan.git
-
+```
+```bash
 cd Tugas-1-dan-Tugas-2-Pengolahan-Citra-Video-Ojan
-
+```
 ### 2. Install Dependencies
+
 
 Menggunakan `requirements.txt`:
 
-
+```bash
 pip install -r requirements.txt
-
+```
 Atau install manual (kalau mau simple):
+``` bash
 pip install opencv-python numpy
-
+```
 ### 3. Verifikasi Instalansi
 Cek apakah OpenCV sudah terpasang dengan benar:
+```bash
 python -c "import cv2; print('OpenCV Version:', cv2.__version__)"
+```
 Kalau tidak error dan versi muncul, berarti siap dipakai. ✅
-
-## 4 Bagian “Cara Menjalankan Program”
-
-Lanjut lagi di bawahnya (buat header baru):
 
 ## 🎮 Cara Menjalankan Program
 
@@ -183,7 +186,9 @@ Lanjut lagi di bawahnya (buat header baru):
 
 ### Menjalankan Tugas 1 – Smoothing, Blurring & Sharpening
 
+``` bash
 python tugas1_blur.py
+```
 
 Tips penggunaan:
 1. Program akan membuka webcam secara otomatis.
@@ -192,23 +197,28 @@ Tips penggunaan:
 4. Tekan q untuk menutup program.
 
 #### Menjalankan Tugas 2 (Deteksi Warna HSV) 🌈
-
+``` bash
 python tugas2_HSV.py
-
+```
 Kontrol Keyboard Utama:
-1 → Deteksi objek merah 🔴
-2 → Deteksi objek hijau 🟢
-3 → Deteksi objek biru 🔵
-4 → Deteksi objek kuning 🟡
-0 → Mode visualisasi channel HSV (untuk lihat H, S, V secara terpisah)
-[ → Perkecil ukuran tampilan jendela mask
-] → Perbesar ukuran tampilan jendela mask
-Q atau q → Keluar dari program
+
+- **1** → Deteksi objek merah 🔴  
+- **2** → Deteksi objek hijau 🟢  
+- **3** → Deteksi objek biru 🔵  
+- **4** → Deteksi objek kuning 🟡  
+- **0** → Mode visualisasi channel HSV (untuk lihat H, S, V secara terpisah)  
+- **[** → Perkecil ukuran tampilan jendela mask  
+- **]** → Perbesar ukuran tampilan jendela mask  
+- **Q** atau **q** → Keluar dari program  
 
 Untuk hasil optimal:
--Gunakan objek dengan warna solid dan pekat.
--Pastikan pencahayaan cukup (tidak terlalu gelap atau “over-exposure”).
--Hindari background dengan warna yang sama persis dengan objek.
+
+- Gunakan objek dengan warna solid dan pekat.  
+- Pastikan pencahayaan cukup (tidak terlalu gelap atau “over-exposure”).  
+- Hindari background dengan warna yang sama persis dengan objek.  
+
+
+## Konsep Teoritis
 
 ### 1. Konvolusi & Kernel dalam Image Processing
 
@@ -351,29 +361,29 @@ Tugas-1-dan-Tugas-2-Pengolahan-Citra-Video-Ojan/
 └── README.md          # Dokumentasi project (file ini)
 
 ```
-🧾 Catatan untuk Dosen
+## 📋 Catatan untuk Dosen
 
-Tugas 1
+### Tugas 1
+- ✅ Implementasi Average Blur dengan 2 ukuran kernel (5×5 dan 9×9)
+- ✅ Implementasi Gaussian Blur (custom kernel + `cv2.filter2D`)
+- ✅ Implementasi Sharpening filter (high-pass)
+- ✅ Switching filter secara real-time via keyboard
+- ✅ Visual overlay nama mode filter di layar webcam
 
-✅ Implementasi Average Blur dengan 2 ukuran kernel (5×5 dan 9×9)
-✅ Implementasi Gaussian Blur (custom kernel + cv2.filter2D)
-✅ Implementasi Sharpening filter (high-pass)
-✅ Switching filter secara real-time via keyboard
-✅ Visual overlay nama mode filter di layar webcam
+### Tugas 2
+- ✅ Konversi BGR → HSV
+- ✅ Thresholding warna untuk 4 warna (merah, hijau, biru, kuning)
+- ✅ Operasi morfologi (Opening & Closing) untuk membersihkan mask
+- ✅ Deteksi kontur, bounding box, dan label area objek
+- ✅ Mode visualisasi HSV / mask untuk pembelajaran
+- ✅ Fitur tambahan: ukuran jendela mask dapat diubah dengan tombol `[` dan `]`
 
-Tugas 2
+## 👨‍💻 Informasi Pengembang
 
-✅ Konversi BGR → HSV
-✅ Thresholding warna untuk 4 warna (merah, hijau, biru, kuning)
-✅ Operasi morfologi (Opening & Closing) untuk membersihkan mask
-✅ Deteksi kontur, bounding box, dan label area objek
-✅ Mode visualisasi HSV / mask untuk pembelajaran
-✅ Fitur tambahan: ukuran jendela mask dapat diubah dengan tombol [ dan ]
+- **Nama**: Nur Rahman Fauzan (Ojan)
+- **Mata kuliah**: Pengolahan Citra Video
+- **Topik**: Implementasi smoothing, blurring, sharpening, dan deteksi warna HSV berbasis webcam
+- **Teknologi**: Python, OpenCV, NumPy
+- **Tahun**: 2025
+- **Catatan**: Project ini dibuat untuk keperluan akademis (tapi kalau mau coba-coba silakan aja 😄)
 
-### 👨‍💻 Informasi Pengembang
-Nama : Nur Rahman Fauzan (Ojan)
-Mata kuliah : Pengolahan Citra Video
-Topik : Implementasi smoothing, blurring, sharpening, dan deteksi warna HSV berbasis webcam
-Teknologi : Python, OpenCV, NumPy
-Tahun : 2025
-Project ini dibuat untuk keperluan akademis.(Tapi kalau mau coba2 silahkan aja)
