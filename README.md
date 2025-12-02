@@ -266,7 +266,7 @@ $$
 
 - Cocok untuk menajamkan detail setelah proses blur.
 
-###5. Ruang Warna BGR vs HSV
+### 5. Ruang Warna BGR vs HSV
 
 BGR (Blue, Green, Red)
 -Sangat sensitif terhadap perubahan pencahayaan.
@@ -282,7 +282,7 @@ Keuntungan HSV:
 -Mudah mengambil range warna tertentu (contoh: semua piksel dengan Hue sekitar merah).
 - Lebih stabil terhadap perubahan lighting moderat.
 
-###6. Operasi Morfologi
+### 6. Operasi Morfologi
 
 - Bekerja pada citra biner (hitam-putih).
 
@@ -303,7 +303,7 @@ Keuntungan HSV:
   - Menutup lubang kecil di dalam objek  
 
 
-###7. Kontur
+### 7. Kontur
 Kontur = kurva yang menghubungkan titik-titik di boundary objek dengan intensitas yang sama.
 OpenCV:
 contours, hierarchy = cv2.findContours(
@@ -342,14 +342,14 @@ Kalau mau nambah problem lain (warna tidak terdeteksi, frame lag, dll) tinggal l
 - Gunakan objek dengan warna lebih pekat.
 - Sesuaikan kembali rentang HSV di kode.
 
-###📁 Struktur Project
+### 📁 Struktur Project
 Tugas-1-dan-Tugas-2-Pengolahan-Citra-Video-Ojan/
 ├── tugas1_blur.py          # Implementasi Tugas 1 (smoothing, blurring, sharpen)
 ├── tugas2_HSV.py           # Implementasi Tugas 2 (deteksi warna HSV + mask)
 ├── requirements.txt        # Daftar dependencies Python
 └── README.md               # Dokumentasi project (file ini)
 
-###🧾 Catatan untuk Dosen
+### 🧾 Catatan untuk Dosen
 **Tugas 1:**
 ✅ Implementasi Average Blur dengan 2 ukuran kernel (5×5 dan 9×9)
 ✅ Implementasi Gaussian Blur
@@ -365,7 +365,7 @@ Tugas-1-dan-Tugas-2-Pengolahan-Citra-Video-Ojan/
 ✅ Mode khusus visualisasi channel HSV
 ✅ Fitur tambahan: ukuran jendela mask dapat diubah dengan [ dan ]
 
-###👨‍💻 Informasi Pengembang
+### 👨‍💻 Informasi Pengembang
 Nama : Nur Rahman Fauzan (Ojan)
 Mata kuliah : Pengolahan Citra Video
 Topik : Implementasi smoothing, blurring, sharpening, dan deteksi warna HSV berbasis webcam
