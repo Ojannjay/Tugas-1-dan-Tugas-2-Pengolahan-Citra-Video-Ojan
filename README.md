@@ -88,7 +88,7 @@ Tugas 1 fokus ke implementasi beberapa jenis **spatial filtering** untuk smoothi
 
 ---
 
-## 🔹 Tugas 2 – Deteksi Warna HSV
+### 🔹 Tugas 2 – Deteksi Warna HSV
 
 File utama: **`tugas2_HSV.py`**
 
